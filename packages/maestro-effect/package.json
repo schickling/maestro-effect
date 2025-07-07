@@ -1,0 +1,49 @@
+{
+  "name": "maestro-effect",
+  "version": "0.0.1",
+  "description": "Effect-native wrapper for Maestro mobile testing framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "maestro-effect": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "effect": "^3.16.12",
+    "@effect/cli": "^0.66.10",
+    "@effect/platform": "^0.87.10",
+    "@effect/platform-node": "^0.89.2",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@effect/vitest": "^0.23.12",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "maestro",
+    "testing",
+    "mobile",
+    "effect",
+    "e2e",
+    "react-native",
+    "expo"
+  ],
+  "author": "",
+  "license": "MIT"
+}

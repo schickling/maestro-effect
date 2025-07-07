@@ -1,0 +1,20 @@
+{
+  "name": "maestro-effect-monorepo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --filter maestro-effect dev",
+    "build": "pnpm --filter maestro-effect build",
+    "test": "pnpm --filter maestro-effect test",
+    "typecheck": "tsc --build tsconfig.all.json",
+    "typecheck:watch": "tsc --build --watch tsconfig.all.json",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "typescript": "^5.7.2"
+  }
+}
