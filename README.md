@@ -189,6 +189,43 @@ The library is built with Effect and follows a service-based architecture:
 - **TestRunnerService** - Orchestrates test execution
 - **TestReporterService** - Handles test reporting
 
+## Examples
+
+See the [examples](./examples) directory for complete working examples:
+
+- **[Basic Examples](./examples/basic)** - Simple TypeScript examples
+- **[Expo App](./examples/expo-app)** - Full Expo/React Native app with tests
+
+### Running the Expo Example
+
+```bash
+# Install dependencies
+pnpm install
+
+# Navigate to expo example
+cd examples/expo-app
+
+# Start the app
+pnpm start
+
+# In another terminal, run tests
+pnpm test        # Maestro YAML test
+pnpm test:effect # Effect-based test
+pnpm test:ci     # Full CI test with simulator
+```
+
+## Development Setup
+
+This project uses Nix for reproducible development environments:
+
+```bash
+# Enter development shell
+nix develop
+
+# Or with direnv
+direnv allow
+```
+
 ## Contributing
 
 See [PLAN.md](./PLAN.md) for the implementation plan and future ideas.

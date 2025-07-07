@@ -11,7 +11,10 @@
     "typecheck:watch": "tsc --build --watch tsconfig.all.json",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "example:expo": "cd examples/expo-app && pnpm start",
+    "example:expo:test": "cd examples/expo-app && pnpm test",
+    "example:expo:test:ci": "cd examples/expo-app && pnpm test:ci"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",

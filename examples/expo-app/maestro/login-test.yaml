@@ -1,0 +1,55 @@
+appId: host.exp.Exponent
+name: Login Flow Test
+---
+# Wait for app to be ready
+- assertVisible:
+    text: "Maestro Effect Demo"
+    optional: true
+
+# Perform login
+- tapOn:
+    id: "email-input"
+- inputText: "test@example.com"
+
+- tapOn:
+    id: "password-input"
+- inputText: "password123"
+
+- tapOn:
+    id: "login-button"
+
+# Verify login success
+- assertVisible:
+    id: "dashboard-title"
+    timeout: 5000
+
+- assertVisible:
+    text: "Dashboard"
+
+# Test shopping cart functionality
+- tapOn:
+    id: "add-item-button"
+- assertVisible:
+    text: "1 items"
+
+- tapOn:
+    id: "add-item-button"
+- assertVisible:
+    text: "2 items"
+
+- tapOn:
+    id: "add-item-button"
+- assertVisible:
+    text: "3 items"
+
+# Remove an item
+- tapOn:
+    id: "remove-item-1"
+- assertVisible:
+    text: "2 items"
+
+# Logout
+- tapOn:
+    id: "logout-button"
+- assertVisible:
+    text: "Maestro Effect Demo"
